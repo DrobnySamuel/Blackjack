@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="pane" prefHeight="500.0" prefWidth="850.0" style="-fx-background-color: #008000;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="sample.ControllerGame">
+    <children>
+        <ImageView fx:id="backButton" fitHeight="50.0" fitWidth="110.0" layoutX="732.0" layoutY="8.0" onMouseClicked="#loadHome" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resources/backToMenu.png" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+        <ImageView fitHeight="176.0" fitWidth="122.0" layoutX="27.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resources/balikKariet.jpg" />
+            </image>
+        </ImageView>
+        <HBox fx:id="hboxPlayer" layoutX="202.0" layoutY="325.0" prefHeight="150.0" prefWidth="237.0">
+            <children>
+                <ImageView fx:id="playerCard1" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="playerCard2" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+            </children></HBox>
+        <HBox fx:id="hboxCroupier" layoutX="202.0" layoutY="26.0" prefHeight="150.0" prefWidth="219.0">
+            <children>
+                <ImageView fx:id="croupierCard1" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="croupierCard2" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                   <Image url="@../resources/cardSample.jpg" />
+                </image></ImageView>
+            </children>
+        </HBox>
+        <TextArea fx:id="playerValue" editable="false" layoutX="271.0" layoutY="275.0" prefHeight="38.0" prefWidth="61.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+        </TextArea>
+      <TextArea fx:id="croupierValue" editable="false" layoutX="271.0" layoutY="188.0" prefHeight="38.0" prefWidth="61.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </TextArea>
+        <TextArea fx:id="gameResult" layoutX="27.0" layoutY="184.0" prefHeight="130.0" prefWidth="567.0" style="-fx-background-color: #008000;" text="" visible="false">
+         <font>
+            <Font name="Cooper Black" size="31.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></TextArea>
+      <VBox alignment="CENTER" layoutX="28.0" layoutY="325.0" prefHeight="150.0" prefWidth="100.0" spacing="10.0">
+         <children>
+             <ImageView fx:id="moveButton" fitHeight="30.0" fitWidth="110" onMouseClicked="#playerMoveAnimation" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@../resources/tahButton.png" />
+                 </image>
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+             </ImageView>
+             <ImageView fx:id="resultButton" fitHeight="30.0" fitWidth="110" onMouseClicked="#makeResult" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@../resources/vyhodnotButton.png" />
+                 </image>
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+             </ImageView>
+             <ImageView fx:id="doubleButton" fitHeight="30.0" fitWidth="110" onMouseClicked="#doubleStrike" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@../resources/doubleButton.png" />
+                 </image>
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+             </ImageView>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="508.0" layoutY="184.0" prefHeight="130.0" prefWidth="110.0" spacing="18.0">
+         <children>
+             <ImageView fx:id="addButton" fitHeight="30.0" fitWidth="110.0" onMouseClicked="#addStrike" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@../resources/addButton.png" />
+                 </image>
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+             </ImageView>
+             <ImageView fx:id="decrementButton" fitHeight="30.0" fitWidth="110.0" onMouseClicked="#reduceStrike" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@../resources/uberButton.png" />
+                 </image>
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+             </ImageView>
+             <ImageView fx:id="giveButton" fitHeight="30.0" fitWidth="110" onMouseClicked="#startGame" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@../resources/rozdajButton.png" />
+                 </image>
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+             </ImageView>
+         </children>
+      </VBox>
+      <Label fx:id="sumLabel" alignment="CENTER" layoutX="629.0" layoutY="184.0" prefHeight="130.0" prefWidth="204.0" style="-fx-background-color: #ffff7f;" text="1.0€">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+        <ImageView fx:id="animatedCard1" fitHeight="150.0" fitWidth="110.0" layoutX="28.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resources/cardSample.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="animatedCard2" fitHeight="150.0" fitWidth="110.0" layoutX="28.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resources/cardSample.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="animatedCard3" fitHeight="150.0" fitWidth="110.0" layoutX="27.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resources/cardSample.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="animatedCard4" fitHeight="150.0" fitWidth="110.0" layoutX="28.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resources/cardSample.jpg" />
+            </image>
+        </ImageView>
+      <ImageView fx:id="playAgainButton" fitHeight="550.0" fitWidth="110.0" layoutX="732.0" layoutY="43.0" onMouseClicked="#playAgain" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/playAgainButton.png" />
+         </image>
+          <cursor>
+              <Cursor fx:constant="HAND" />
+          </cursor>
+      </ImageView>
+    </children>
+</AnchorPane>

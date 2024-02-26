@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" prefHeight="350.0" prefWidth="348.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="sample.ControllerScore">
+   <children>
+       <TableView fx:id="tableView" prefHeight="350.0" prefWidth="350.0" stylesheets="@../resources/style.css">
+           <columns>
+               <TableColumn fx:id="date" prefWidth="110" resizable="false" text="Dátum" />
+               <TableColumn fx:id="event" prefWidth="110" resizable="false" text="Udalosť" />
+               <TableColumn fx:id="sum" prefWidth="110" resizable="false" text="Suma" />
+           </columns>
+       </TableView>
+   </children>
+</AnchorPane>
